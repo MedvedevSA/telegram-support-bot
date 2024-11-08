@@ -1,0 +1,9 @@
+services:
+  telegram-support-bot:
+    image: telegram-support-bot
+    build: .
+    restart: always
+    environment:
+      - TELEGRAM_TOKEN=${TELEGRAM_TOKEN}
+      - TELEGRAM_SUPPORT_CHAT_ID=${TELEGRAM_SUPPORT_CHAT_ID}
+      - PERSONAL_ACCOUNT_CHAT_ID=${PERSONAL_ACCOUNT_CHAT_ID}
