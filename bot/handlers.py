@@ -39,7 +39,7 @@ async def forward_to_group(update: Update, context: ContextTypes.DEFAULT_TYPE):
         for user_id, message_date in bot_data.recent_user_activity.items():
             if (
                 user_id == update.effective_user.id and
-                message.date - timedelta(seconds=10) < message_date
+                message.date - timedelta(hours=1) < message_date
             ):
                 send_default_reply = False
 
